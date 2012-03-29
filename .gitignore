@@ -13,3 +13,10 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Continue
+.sass-cache/
+config/database.yml
+.DS_Store
+*~
+public/assets
