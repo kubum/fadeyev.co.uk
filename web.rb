@@ -15,6 +15,10 @@ get '/' do
   erb :index
 end
 
+get '/project' do
+  erb :project
+end
+
 get '/application.css' do
   content_type 'text/css', :charset => 'utf-8'
   sass :application
