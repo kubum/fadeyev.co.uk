@@ -23,3 +23,13 @@ get '/application.css' do
   content_type 'text/css', :charset => 'utf-8'
   sass :application
 end
+
+get '/gantt.css' do
+  content_type 'text/css', :charset => 'utf-8'
+  sass :gantt
+end
+
+get '/jquery.fn.fantt.js' do
+  content_type 'text/css', :charset => 'utf-8'
+  sass :gantt
+end

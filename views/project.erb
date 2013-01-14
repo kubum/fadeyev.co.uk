@@ -1,14 +1,14 @@
-<link rel="stylesheet" href="http://taitems.github.com/jQuery.Gantt/css/style.css" />
+<link href="gantt.css" media="screen" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" />
 <link rel="stylesheet" href="http://taitems.github.com/UX-Lab/core/css/prettify.css" />
  
 <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-<script src="http://taitems.github.com/jQuery.Gantt/js/jquery.fn.gantt.js"></script>
+<script src="/js/jquery.fn.gantt.js"></script>
 <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tooltip.js"></script>
 <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-popover.js"></script>
 <script src="http://taitems.github.com/UX-Lab/core/js/prettify.js"></script>
 
-<h1>Project Gantt chart draft</h1>
+<h1>Project Gantt chart</h1>
 
 <div class="gantt"></div>
 
@@ -16,92 +16,237 @@
 $(function() {
 	$(".gantt").gantt({
 		source: [{
-			name: "Sprint 0",
-			desc: "Analysis",
+			name: "W19 - W20",
+			desc: "Working on project proposal",
 			values: [{
-				from: "/Date(1320192000000)/",
-				to: "/Date(1322401600000)/",
-				label: "Requirement Gathering", 
+				from: "/Date(2013, 0, 7)/",
+				to: "/Date(2013, 0, 18)/",
+				label: "Working on project proposal", 
+				customClass: "ganttRed"
+			}]
+  	},{
+  		name: " ",
+  		desc: "Proposal deadline",
+  		values: [{
+  			from: "/Date(2013, 0, 18)/",
+  			to: "/Date(2013, 0, 18)/",
+  			label: "Proposal deadline", 
+  			customClass: "milestone"
+  		}]
+  	},{
+			name: "W20 - W21",
+			desc: "Producing a content plan",
+			values: [{
+				from: "/Date(2013, 0, 19)/",
+				to: "/Date(2013, 0, 23)/",
+				label: "Producing a content plan", 
 				customClass: "ganttRed"
 			}]
 		},{
-			name: " ",
-			desc: "Scoping",
+			name: "W21 - W22",
+			desc: "Review the available tools in action",
 			values: [{
-				from: "/Date(1322611200000)/",
-				to: "/Date(1323302400000)/",
-				label: "Scoping", 
+				from: "/Date(2013, 0, 24)/",
+				to: "/Date(2013, 0, 31)/",
+				label: "Review the available tools in action", 
+				customClass: "ganttOrange"
+			}]
+    },{
+    	name: "W22",
+    	desc: "Define detailed requirements for artefact",
+    	values: [{
+    		from: "/Date(2013, 1, 1)/",
+    		to: "/Date(2013, 1, 2)/",
+    		label: "Define detailed requirements for artefact", 
+    		customClass: "ganttRed"
+    	}]
+    },{
+    	name: "W22 - W23",
+    	desc: "Write an introduction",
+			values: [{
+				from: "/Date(2013, 1, 3)/",
+				to: "/Date(2013, 1, 7)/",
+				label: "Write an introduction", 
+				customClass: "ganttRed"
+			}]
+    },{
+    	name: "W23",
+    	desc: "Create wireframes of an application",
+			values: [{
+				from: "/Date(2013, 1, 8)/",
+				to: "/Date(2013, 1, 10)/",
+				label: "Create wireframes of an application", 
+				customClass: "ganttOrange"
+			}]
+    },{
+    	name: "W24",
+    	desc: "Create a description of future architecture",
+			values: [{
+				from: "/Date(2013, 1, 11)/",
+				to: "/Date(2013, 1, 13)/",
+				label: "Create description of future architecture", 
+				customClass: "ganttRed"
+			}]
+    },{
+    	name: "W24",
+    	desc: "Create a first prototype of an application",
+			values: [{
+				from: "/Date(2013, 1, 13)/",
+				to: "/Date(2013, 1, 17)/",
+				label: "Create a first prototype of an application", 
+				customClass: "ganttOrange"
+			}]
+    },{
+    	name: "W25",
+    	desc: "Summarising current experience in the report",
+			values: [{
+				from: "/Date(2013, 1, 18)/",
+				to: "/Date(2013, 1, 23)/",
+				label: "Summarising current experience in the report", 
+				customClass: "ganttRed"
+			}]
+    },{
+    	name: "W25 - W26",
+    	desc: "Working on interim report",
+			values: [{
+				from: "/Date(2013, 1, 24)/",
+				to: "/Date(2013, 2, 1)/",
+				label: "Working on iterim report", 
 				customClass: "ganttRed"
 			}]
 		},{
-			name: "Sprint 1",
-			desc: "Development",
+  		name: " ",
+  		desc: "Interim report deadline",
+  		values: [{
+  			from: "/Date(2013, 2, 1)/",
+  			to: "/Date(2013, 2, 1)/",
+  			label: "Interim report deadline", 
+  			customClass: "milestone"
+  		}]
+    },{
+    	name: "W26 - W27",
+    	desc: "Create usable design for an application",
 			values: [{
-				from: "/Date(1323802400000)/",
-				to: "/Date(1325685200000)/",
-				label: "Development", 
+				from: "/Date(2013, 2, 2)/",
+				to: "/Date(2013, 2, 5)/",
+				label: "Create usable design for an application", 
 				customClass: "ganttGreen"
 			}]
-		},{
-			name: " ",
-			desc: "Showcasing",
+    },{
+    	name: "W27",
+    	desc: "Implementing the design into the application",
 			values: [{
-				from: "/Date(1325685200000)/",
-				to: "/Date(1325695200000)/",
-				label: "Showcasing", 
-				customClass: "ganttBlue"
-			}]
-		},{
-			name: "Sprint 2",
-			desc: "Development",
-			values: [{
-				from: "/Date(1326785200000)/",
-				to: "/Date(1325785200000)/",
-				label: "Development", 
-				customClass: "ganttGreen"
-			}]
-		},{
-			name: " ",
-			desc: "Showcasing",
-			values: [{
-				from: "/Date(1328785200000)/",
-				to: "/Date(1328905200000)/",
-				label: "Showcasing", 
-				customClass: "ganttBlue"
-			}]
-		},{
-			name: "Release Stage",
-			desc: "Training",
-			values: [{
-				from: "/Date(1330011200000)/",
-				to: "/Date(1336611200000)/",
-				label: "Training", 
+				from: "/Date(2013, 2, 6)/",
+				to: "/Date(2013, 2, 10)/",
+				label: "Implementing the design to the application", 
 				customClass: "ganttOrange"
 			}]
-		},{
-			name: " ",
-			desc: "Deployment",
+    },{
+    	name: "W28",
+    	desc: "Adding necessary features to artefact",
 			values: [{
-				from: "/Date(1336611200000)/",
-				to: "/Date(1338711200000)/",
-				label: "Deployment", 
+				from: "/Date(2013, 2, 11)/",
+				to: "/Date(2013, 2, 16)/",
+				label: "Adding necessary features to artefact", 
 				customClass: "ganttOrange"
 			}]
-		},{
-			name: " ",
-			desc: "Warranty Period",
-			values: [{
-				from: "/Date(1336611200000)/",
-				to: "/Date(1349711200000)/",
-				label: "Warranty Period", 
-				customClass: "ganttOrange"
-			}]
-		}],
+    },{
+    	name: "W28 - W30",
+    	desc: "Describe current experience in the report",
+  		values: [{
+  			from: "/Date(2013, 2, 17)/",
+  			to: "/Date(2013, 2, 26)/",
+  			label: "Describe experience in the report", 
+  			customClass: "ganttRed"
+  		}]
+    },{
+    	name: "W30",
+    	desc: "Test the web application",
+  		values: [{
+  			from: "/Date(2013, 2, 27)/",
+  			to: "/Date(2013, 2, 30)/",
+  			label: "Test the web application", 
+  			customClass: "ganttGreen"
+  		}]
+    },{
+    	name: "W30 - W31",
+    	desc: "Analyse the collected data after testing",
+  		values: [{
+  			from: "/Date(2013, 2, 31)/",
+  			to: "/Date(2013, 3, 7)/",
+  			label: "Analyse the collected data after testing", 
+  			customClass: "ganttRed"
+  		}]
+    },{
+    	name: "W32",
+    	desc: "Preparing the project to the draft submission",
+  		values: [{
+  			from: "/Date(2013, 3, 8)/",
+  			to: "/Date(2013, 3, 12)/",
+  			label: "Preparing the project to the draft submission", 
+  			customClass: "ganttRed"
+  		}]
+  	},{
+  		name: " ",
+  		desc: "Draft report deadline",
+  		values: [{
+  			from: "/Date(2013, 3, 12)/",
+  			to: "/Date(2013, 3, 12)/",
+  			label: "Producing a content plan", 
+  			customClass: "milestone"
+  		}]
+    },{
+    	name: "W32 - W33",
+    	desc: "Fixing all artefact issues",
+  		values: [{
+  			from: "/Date(2013, 3, 13)/",
+  			to: "/Date(2013, 3, 19)/",
+  			label: "Fixing all artefact issues", 
+  			customClass: "ganttOrange"
+  		}]
+    },{
+    	name: "W33 - W34",
+    	desc: "Finalising the project",
+  		values: [{
+  			from: "/Date(2013, 3, 20)/",
+  			to: "/Date(2013, 3, 25)/",
+  			label: "Finalising the project", 
+  			customClass: "ganttRed"
+  		}]
+    },{
+    	name: "W34",
+    	desc: "Deploy the application for the presentation",
+  		values: [{
+  			from: "/Date(2013, 3, 26)/",
+  			to: "/Date(2013, 3, 27)/",
+  			label: "Deploy the application for presentation", 
+  			customClass: "ganttGreen"
+  		}]
+    },{
+    	name: "W34 - W35",
+    	desc: "Preparing to the presentation & work submitting",
+  		values: [{
+  			from: "/Date(2013, 3, 28)/",
+  			to: "/Date(2013, 4, 3)/",
+  			label: "Preparing to the presentation & work submitting", 
+  			customClass: "ganttRed"
+  		}]
+  	},{
+  		name: " ",
+  		desc: "Submit final report",
+  		values: [{
+  			from: "/Date(2013, 4, 3)/",
+  			to: "/Date(2013, 4, 3)/",
+  			label: "Submit final report", 
+  			customClass: "milestone"
+  		}]
+    }],
 		navigate: "scroll",
-		scale: "weeks",
+		scale: "days",
 		maxScale: "months",
 		minScale: "days",
-		itemsPerPage: 10,
+		itemsPerPage: 50,
+		startPos: new Date(2013, 0, 1)
 	});
 
 	prettyPrint();
